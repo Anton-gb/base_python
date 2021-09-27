@@ -11,9 +11,8 @@ def currency_rates(name):
         _text = text_xml.text[value_name:_find_va]
         g = _text.split('<Value>')
         value = g[-1]
-        for i in value:
-            if i == ',':
-                value = float(value.replace(',', '.'))
+        if ',' in value:
+            value = float(value.replace(',', '.'))
         # получение даты
         _find_date = text_xml.text.find('Date')
         _find_name = text_xml.text.find("name")
