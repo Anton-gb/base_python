@@ -1,7 +1,8 @@
 src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 
 # использовал range, а не enumerate, чтобы не затрагивать последний элемент списка
-res = [src[num + 1] for num in range(len(src) - 1) if src[num + 1] > src[num]]
+# res = [src[num + 1] for num in range(len(src) - 1) if src[num + 1] > src[num]]
+res = [elem_prev for elem, elem_prev in zip(src, src[1:]) if elem < elem_prev]
 print(res)
 
 #
