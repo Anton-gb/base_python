@@ -1,10 +1,4 @@
-import requests
 import json
-
-text = requests.get('https://github.com/elastic/examples/raw/master/Common%20Data%20Formats/nginx_logs/nginx_logs')
-
-with open('nginx_logs.txt', 'w', encoding='UTF-8') as f:
-    json.dump(text.text, f)
 
 with open('nginx_logs.txt', 'r', encoding='UTF-8') as f:
     p = json.load(f)
@@ -30,4 +24,4 @@ spam_dict = {}
 for i in spam:
     spam_dict[i] = spam_dict.get(i, 0) + 1
 
-print(max(spam_dict, key=spam_dict.get))
+print(f'Спамер: {max(spam_dict, key=spam_dict.get)}')
