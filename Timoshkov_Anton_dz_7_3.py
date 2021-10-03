@@ -52,10 +52,6 @@ def create_dir(res_dict, dir_path=os.getcwd()):
             create_dir(val, os.path.join(dir_path, key))
 
 
-def create_templates():
-    pass
-
-
 file_name = 'config.yaml'
 
 with open(file_name, 'r') as f:
@@ -66,5 +62,3 @@ res = parsing(config)
 print(json.dumps(res, indent=2))
 
 create_dir(res)
-
-create_templates()
