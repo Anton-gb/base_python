@@ -2,17 +2,12 @@ import time
 
 
 class TrafficLight:
-    __color = ['красный', 'жёлтый', 'зелёный']
+    __color = [('красный', 7), ('жёлтый', 5), ('зелёный', 1)]
 
     def running(self):
         for i in TrafficLight.__color:
-            print(i)
-            if i == 'красный':
-                time.sleep(7)
-            elif i == 'жёлтый':
-                time.sleep(5)
-            else:
-                time.sleep(1)
+            print(i[0])
+            time.sleep(i[1])
 
 
 TrafficLight().running()
