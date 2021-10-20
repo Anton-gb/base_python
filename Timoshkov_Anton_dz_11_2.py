@@ -3,8 +3,8 @@ class OwnError(Exception):
         self.txt = txt
 
 
-inp_denominator = int(input("Введите число, на которое хотите разделить: "))
 inp_numerator = int(input("Введите число, которое хотите разделить: "))
+inp_denominator = int(input("Введите число, на которое хотите разделить: "))
 
 try:
     if inp_denominator == 0:

@@ -12,6 +12,7 @@ class Complex:
                f"{self.real * other.imaginary  + other.real * self.imaginary}i"
 
 
+# в класс передается действительная и мнимая часть
 a = Complex(3, 4)
 b = Complex(2, 3)
 print(a + b)

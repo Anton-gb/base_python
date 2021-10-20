@@ -17,6 +17,6 @@ while inp_num != 'stop':
     except OwnError as err:
         print(err)
 else:
-    print('Введение числа')
+    print('Введение числа: ')
     print(box)
 

@@ -34,5 +34,7 @@ class DateGet:
             return False
 
 
-a = DateGet('14-13-2018')
+a = DateGet('14-11-2018')
+print(a.parc_date())
+a = DateGet('14-14-2018')
 print(a.parc_date())
